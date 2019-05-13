@@ -7,13 +7,13 @@ function BlogPost(props) {
     const post = props.data.markdownRemark;
     // const url = props.data.site.siteMetadata.siteUrl
     const { title, description } = post.frontmatter;
-    
+
     return (
         <Layout>
 
             <div>
                 <h1>{title}</h1>
-                <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
+                // <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
                 <div dangerouslySetInnerHTML={{ __html: post.html }} />
             </div>
         </Layout>
