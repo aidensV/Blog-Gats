@@ -7,10 +7,10 @@ function BlogPost(props) {
     const post = props.data.markdownRemark;
     // const url = props.data.site.siteMetadata.siteUrl
     const { title, description } = post.frontmatter;
-    const thumbnail = post.frontmatter.image.childImageSharp.resize.src
+    
     return (
         <Layout>
-          
+
             <div>
                 <h1>{title}</h1>
                 <Img fluid={post.frontmatter.image.childImageSharp.fluid} />
